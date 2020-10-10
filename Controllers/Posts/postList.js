@@ -41,7 +41,7 @@ const postListHandler = (knex) => (req, res) => {
             }
         })
         .catch(err => {
-            res.status(400).json(err)
+            res.status(400).json('something is wrong. :(')
         })
 }
 
