@@ -10,10 +10,10 @@ const jwt = require('jsonwebtoken');
 var knex = require('knex')({
     client: 'pg',
     connection: {
-      connectionString : 'postgresql-parallel-34994' || '127.0.0.1',
-      user : 'postgres',
-      password : 'admin',
-      database : 'diary'
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+          rejectUnauthorized: false
+        }
     }
 });
 
