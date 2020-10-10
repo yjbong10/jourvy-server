@@ -22,7 +22,8 @@ CREATE TABLE posts (
     email text NOT NULL,
     title varchar(100) NOT NULL,
     content varchar(2000) NOT NULL,
-    posted TIMESTAMP NOT NULL
+    posted TIMESTAMP NOT NULL,
+    edited TIMESTAMP
 );
 
 /* This store all user's profile infomation */ 
