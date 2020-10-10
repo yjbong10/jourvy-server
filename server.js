@@ -47,7 +47,7 @@ const weather = require('./Controllers/Weather/weather');
 
 //middleware
 const app = express();
-app.use(cors({credentials: true, origin: 'http://192.168.0.171:3000'}));
+app.use(cors({credentials: true, origin: 'https://jourvy.herokuapp.com'}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
