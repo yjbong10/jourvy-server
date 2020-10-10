@@ -36,7 +36,7 @@ CREATE TABLE profile (
 
 /* This store all user's setting infomation */ 
 CREATE TABLE settings (
-    id SERIAL PRIMARY KEY,
+    settings_id SERIAL PRIMARY KEY,
     email text UNIQUE NOT NULL,
     is_night_mode BOOLEAN DEFAULT false,
     auto_location BOOLEAN DEFAULT true,
