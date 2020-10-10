@@ -53,7 +53,7 @@ app.use(cookieParser());
 
 
 // Variables
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 const JWT_SECRET = 'secret';
 const saltRounds = 5;
 const Age = 12 * 60 * 60 // 12hrs to secs
