@@ -21,15 +21,15 @@ CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     email text NOT NULL,
     title varchar(100) NOT NULL,
-    content varchar(1000) NOT NULL,
-    posted TIMESTAMP NOT NULL,
+    content varchar(2000) NOT NULL,
+    posted TIMESTAMP NOT NULL
 );
 
 /* This store all user's profile infomation */ 
 CREATE TABLE profile (
     id SERIAL PRIMARY KEY,
     email text UNIQUE NOT NULL,
-    total_posts BIGINT set DEFAULT 0,
+    total_posts BIGINT DEFAULT 0,
     total_edits BIGINT DEFAULT 0,
     total_deletes BIGINT DEFAULT 0
 );
@@ -38,9 +38,9 @@ CREATE TABLE profile (
 CREATE TABLE settings (
     id SERIAL PRIMARY KEY,
     email text UNIQUE NOT NULL,
-    is_night_mode BOOLEAN set DEFAULT 0,
-    auto_location BOOLEAN set DEFAULT 1,
-    location_method BOOLEAN set DEFAULT 0,
+    is_night_mode BOOLEAN DEFAULT false,
+    auto_location BOOLEAN DEFAULT true,
+    location_method BOOLEAN DEFAULT false,
     lat VARCHAR(20),
     lon VARCHAR(20),
     city varchar(30)
