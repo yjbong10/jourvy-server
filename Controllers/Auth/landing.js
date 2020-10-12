@@ -7,7 +7,7 @@ const landingVerifyHandler = (jwt, JWT_SECRET, knex) => (req, res) => {
                     .then(user => {
                         res.json(user[0])
                     })
-                    .catch(err => res.json(err));
+                    .catch(err => res.json('something is wrong. :('));
             } else {
                 res.json('wrong token') 
             }

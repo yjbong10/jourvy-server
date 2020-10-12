@@ -10,10 +10,10 @@ const jwt = require('jsonwebtoken');
 var knex = require('knex')({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'admin',
-      database : 'diary'
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+          rejectUnauthorized: false
+        }
     }
 });
 
@@ -47,13 +47,13 @@ const weather = require('./Controllers/Weather/weather');
 
 //middleware
 const app = express();
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: 'https://jourvy.herokuapp.com'}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
 
 // Variables
-const PORT = 3001;
+const PORT = process.env.PORT;
 const JWT_SECRET = 'secret';
 const saltRounds = 5;
 const Age = 12 * 60 * 60 // 12hrs to secs
