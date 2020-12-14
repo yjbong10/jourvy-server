@@ -10,7 +10,7 @@ const loginHandler = (knex, bcrypt, createToken, Age) => (req, res) => {
                 .where('users.email', email)
                 .then(user => {
                     const token = createToken(user[0].email)
-                    res.cookie('jwt', token, { httpOnly:true, secure:false, maxAge: Age * 1000, sameSite: 'none'}) //12hrs to milisecs
+                    res.cookie('jwt', token, { httpOnly:true, secure:true, maxAge: Age * 1000, sameSite: 'none'}) //12hrs to milisecs
                     res.json(user[0])
                 })
                 .catch(err => res.status(400).json('something is wrong :('))
