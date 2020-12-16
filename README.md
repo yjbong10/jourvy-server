@@ -3,7 +3,7 @@
 Jourvy is a free online diary and personal journal. (A CRUD Single-Page-Application.)
 
 Website: [https://jourvy.herokuapp.com/](https://jourvy.herokuapp.com/) ---
-(Note: It might take few seconds to load as Heroku's free server will put to sleep after certain period of time unused.)
+(Note: It might take few seconds to load as Heroku's free server will put to sleep after a certain period of time unused.)
 
 Client: [https://github.com/yjbong10/jourvy](https://github.com/yjbong10/jourvy)
 
